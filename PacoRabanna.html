@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Perfume</title>
+<!-- this is where my scripts are attached to my style sheets --> 
+<script src="js/Cart.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/products.css" rel="stylesheet">
+
+
+<!-- this css code allows me to change some of the styles for the products and . -->
+<style type="text/css">
+
+.cartHeaders,.totalRow{display:none;}
+		.simpleCart_items{
+			overflow-y:auto;
+			overflow-x:hidden;
+			height:324px;
+			width:243px;
+			margin-bottom:20px;
+		}
+		.itemContainer{
+			clear:both;
+			width:229px;
+			padding:11px 0;
+			font-size:11px;
+		} 
+		
+		.itemImage{
+			float:left;
+			width:60px;
+		}
+		.itemName{
+			float:left;
+			width:85px;
+		}
+		.itemPrice{
+			float:left;
+			width:85px;
+			color: gray;
+		}
+		.itemQuantity{
+			float:left;
+			width:33px;
+			margin-top:-12px;
+			vertical-align:middle;
+		}
+		.itemQuantity input{
+			width:20px;
+			border:1px solid #ccc;
+			padding:3px 2px;
+		}
+		
+		.itemTotal{
+			float:left;
+			color:#c23f26;
+			margin-top:-6px
+		}
+		#sidebar
+		
+	a.simpleCart_checkout,
+    .checkoutEmptyLinks a.simpleCart_checkout{
+	display:-moz-inline-box;
+	display:inline-block;
+	width:87px;
+	height:25px;
+    background-image: url('btnCheckout.gif');
+	overflow:hidden;
+	margin-left:125px;
+	vertical-align:middle;
+	text-indent:-9999px;
+	font-size:0;
+}
+a.btnCheckout:hover{
+	background-position:87px 0;
+}
+.image-contrainer {
+  margin: 0 auto;
+  position: relative;
+}
+</style>
+<script type="text/javascript">
+	simpleCart = new cart("");
+	</script>
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/genral.css" rel="stylesheet">
+  </head>
+<!-- this is the coding for the navigation bar, it allows user to navigate throw the whole website. the navigation used classes the whole way throw to be able to change single sections of the code. 
+-->
+  <body>
+     <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="MainPage.html">Home</a></li>
+                <li><a href="Women.html">Women</a></li>
+                <li><a href="Men.html">Men</a></li>
+                 <li><a href="GiftSets.html">Gifts</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="d-men">Men</a></li>
+                    <li><a href="d-women">Women</a></li>
+                    <li><a href="d-gifts">Gift</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+<div class="image-contrainer">
+    <img src="images/carousel4.jpg" width="100%" height="100%" class="baba">
+  </div>
+  
+    
+
+   	<div id="content">
+			
+			<!--Here is the coding for products. The name, image and price for both item products and the cart products.
+			coding also contains a onclick code this mean the code after this point only shows when the user has clicked.
+			-->
+			
+			<ul id="catalog">
+				
+				<li>
+					<img src="images/paco/big/p1.png" alt="Calvin Klein CK One Summer 2016 Eau de Toilette Spray 100ml" />
+					<span class="price">£50</span><b>CK One Summer 2016<br/><a href="myCart.html" onclick="simpleCart.add('name= CK One Summer 2016 ','price=50','image=images/paco/small/p1.png');return false;"> Add to Cart</a></b>
+				</li>
+				
+			   <li>
+					<img src="images/paco/big/p2.png" alt="Red Shoe" />
+					<span class="price">£50</span><b>Red Shoe<br/><a href="myCart.html" onclick="simpleCart.add('name=Red Shoe','price=50','image=images/paco/small/p2.png');return false;"> Add to Cart</a></b>
+				</li>
+				<li>
+					<img src="images/paco/big/p3.png" alt="Davidoff Echo Eau de Toilette Spray 100ml" />
+					<span class="price">£32.99</span><b>Davidoff 100ml<br/><a href="myCart.html" onclick="simpleCart.add('name= Davidoff 100m','price=32.99','image=images/paco/small/p3.png');return false;"> Add to Cart</a></b>
+				</li>
+			
+				</ul>
+				<div id="sidebar">
+				<h2>Your Cart</h2>
+				
+				
+	            <!-- this div contains a  class "simpleCart_items" which show the items in the shopping cart area.-->
+				<div class="simpleCart_items" >
+				</div>
+				
+				
+				<!--Here's the Links to Checkout and Empty Cart-->
+				<a href="#" class="simpleCart_empty">empty cart</a>
+				<a href="myCart.html" class="simpleCart_checkout">Checkout</a>
+				
+				
+				
+				
+				
+			
+			</div>
+		
+		
+		</div>
+ 
+     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+</body>
+</html>
